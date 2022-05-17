@@ -6,13 +6,18 @@
 </head>
 <body>
   <div id="vm">
-    {{ message }}
+    <h1>Firstname: {{ firstname }}</h1>
+    <h1>Lastname: {{ lastname }}</h1>
+    <div v-html = "htmlcontent"></div>
+    <img v-bind:src ="imgsrc" width="300" height="300" />
   </div>
-  
+
   <script>
-    var data = { 
-      a:1 ,
-      message :'Hello World!'
+    var data = {
+      firstname: "Aaron",
+      lastname: "Hughes",
+      htmlcontent: "<div><h1>Vue Js Template</h1></div>",
+      imgsrc: "images/img.jpg"
      }
 
     var vm = new Vue({
